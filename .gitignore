@@ -1,0 +1,10 @@
+# NetBeans build output
+/build/
+/dist/
+
+# NetBeans local private settings
+/nbproject/private/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
