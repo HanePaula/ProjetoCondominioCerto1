@@ -28,7 +28,6 @@ public class TelaCadastroCustoNivel2 extends javax.swing.JDialog {
 
         // CORREÇÃO DE LARGURA: Garante tamanhos confortáveis e impede que os campos encolham!
         jTextFieldDescricao.setPreferredSize(new java.awt.Dimension(270, 23)); // Descrição
-        jTextField2.setPreferredSize(new java.awt.Dimension(198, 23)); // Tipo CC
 
     }
 
