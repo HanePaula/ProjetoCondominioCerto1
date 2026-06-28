@@ -8,12 +8,44 @@ package view;
  *
  * @author aluno
  */
-public class TelaCadastroEdificio_1 extends javax.swing.JDialog {
+public class TelaCadastroEdificio extends javax.swing.JDialog {
+
+    public javax.swing.JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+
+    public javax.swing.JButton getjButtonCancelar() {
+        return jButtonCancelar;
+    }
+
+    public javax.swing.JButton getjButtonGravar() {
+        return jButtonGravar;
+    }
+
+    public javax.swing.JButton getjButtonNovo() {
+        return jButtonNovo;
+    }
+
+    public javax.swing.JButton getjButtonSair() {
+        return jButtonSair;
+    }
+
+    public javax.swing.JPanel getjPanelbotoes() {
+        return jPanelbotoes;
+    }
+
+    public javax.swing.ButtonGroup getButtonGroup1() {
+        return buttonGroup1;
+    }
+
+    public javax.swing.JPanel getjPanelDados() {
+        return jPanelDados;
+    }
 
     /**
-     * Creates new form TelaCadastroEdificio_1
+     * Creates new form TelaCadastroEdificio
      */
-    public TelaCadastroEdificio_1(java.awt.Frame parent, boolean modal) {
+    public TelaCadastroEdificio(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
@@ -425,20 +457,20 @@ public class TelaCadastroEdificio_1 extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroEdificio_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroEdificio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroEdificio_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroEdificio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroEdificio_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroEdificio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroEdificio_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroEdificio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                TelaCadastroEdificio_1 dialog = new TelaCadastroEdificio_1(new javax.swing.JFrame(), true);
+                TelaCadastroEdificio dialog = new TelaCadastroEdificio(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

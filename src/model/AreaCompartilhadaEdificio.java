@@ -1,4 +1,4 @@
-package condominios;
+package model;
 
 public class AreaCompartilhadaEdificio {
     private int id;

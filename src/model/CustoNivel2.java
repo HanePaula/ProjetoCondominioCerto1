@@ -1,4 +1,4 @@
-package condominios;
+package model;
 
 public class CustoNivel2 {
     private int id;

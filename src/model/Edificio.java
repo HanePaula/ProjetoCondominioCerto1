@@ -1,4 +1,4 @@
-package condominios;
+package model;
 
 import java.util.List;
 
