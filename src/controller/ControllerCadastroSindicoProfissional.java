@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.TelaCadastroSindicoProfissional;
+import view.TelaBuscaSindicoProfissional;
 
 public class ControllerCadastroSindicoProfissional implements ActionListener {
 
@@ -38,6 +39,9 @@ public class ControllerCadastroSindicoProfissional implements ActionListener {
             utilities.Utilities.LimpaComponentes(this.telaCadastroSindicoProfissional.getjPanelDados(), false, this.telaCadastroSindicoProfissional.getButtonGroup1());
 
         } else if (action.getSource() == this.telaCadastroSindicoProfissional.getjButtonBuscar()) {
+            TelaBuscaSindicoProfissional telaBuscaSindicoProfissional = new TelaBuscaSindicoProfissional(null, true);
+            new ControllerBuscaSindicoProfissional(telaBuscaSindicoProfissional);
+            telaBuscaSindicoProfissional.setVisible(true);
 
         } else if (action.getSource() == this.telaCadastroSindicoProfissional.getjButtonSair()) {
             this.telaCadastroSindicoProfissional.dispose();
