@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.TelaCadastroFornecedor;
+import view.TelaBuscaFornecedor;
 
 public class ControllerCadastroFornecedor implements ActionListener {
 
@@ -38,6 +39,9 @@ public class ControllerCadastroFornecedor implements ActionListener {
             utilities.Utilities.LimpaComponentes(this.telaCadastroFornecedor.getjPanelDados(), false, this.telaCadastroFornecedor.getButtonGroup1());
 
         } else if (action.getSource() == this.telaCadastroFornecedor.getjButtonBuscar()) {
+            TelaBuscaFornecedor telaBuscaFornecedor = new TelaBuscaFornecedor(null, true);
+            new ControllerBuscaFornecedor(telaBuscaFornecedor);
+            telaBuscaFornecedor.setVisible(true);
 
         } else if (action.getSource() == this.telaCadastroFornecedor.getjButtonSair()) {
             this.telaCadastroFornecedor.dispose();
