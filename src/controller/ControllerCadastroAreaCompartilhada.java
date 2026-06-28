@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.TelaCadastroAreaCompartilhada;
+import view.TelaBuscaAreaCompartilhada;
 
 public class ControllerCadastroAreaCompartilhada implements ActionListener {
 
@@ -38,6 +39,9 @@ public class ControllerCadastroAreaCompartilhada implements ActionListener {
             utilities.Utilities.LimpaComponentes(this.telaCadastroAreaCompartilhada.getjPanelDados(), false, this.telaCadastroAreaCompartilhada.getButtonGroup1());
 
         } else if (action.getSource() == this.telaCadastroAreaCompartilhada.getjButtonBuscar()) {
+            TelaBuscaAreaCompartilhada telaBuscaAreaCompartilhada = new TelaBuscaAreaCompartilhada(null, true);
+            new ControllerBuscaAreaCompartilhada(telaBuscaAreaCompartilhada);
+            telaBuscaAreaCompartilhada.setVisible(true);
 
         } else if (action.getSource() == this.telaCadastroAreaCompartilhada.getjButtonSair()) {
             this.telaCadastroAreaCompartilhada.dispose();
