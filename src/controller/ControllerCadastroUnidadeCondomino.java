@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.TelaCadastroUnidadeCondomino;
+import view.TelaBuscaUnidadeCondomino;
 
 public class ControllerCadastroUnidadeCondomino implements ActionListener {
 
@@ -38,6 +39,9 @@ public class ControllerCadastroUnidadeCondomino implements ActionListener {
             utilities.Utilities.LimpaComponentes(this.telaCadastroUnidadeCondomino.getjPanelDados(), false, this.telaCadastroUnidadeCondomino.getButtonGroup1());
 
         } else if (action.getSource() == this.telaCadastroUnidadeCondomino.getjButtonBuscar()) {
+            TelaBuscaUnidadeCondomino telaBuscaUnidadeCondomino = new TelaBuscaUnidadeCondomino(null, true);
+            new ControllerBuscaUnidadeCondomino(telaBuscaUnidadeCondomino);
+            telaBuscaUnidadeCondomino.setVisible(true);
 
         } else if (action.getSource() == this.telaCadastroUnidadeCondomino.getjButtonSair()) {
             this.telaCadastroUnidadeCondomino.dispose();
