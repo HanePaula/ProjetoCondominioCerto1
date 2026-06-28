@@ -41,7 +41,6 @@ public class TelaCadastroUnidade extends javax.swing.JDialog {
     public JPanel getjPanelbotoes() { return jPanelbotoes; }
     public JPanel getjPanelDados() { return jPanelDados; }
     public ButtonGroup getButtonGroup1() { return buttonGroup1; }
-    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -263,7 +262,6 @@ public class TelaCadastroUnidade extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldIdActionPerformed
 
     /**

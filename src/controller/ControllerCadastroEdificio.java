@@ -53,14 +53,11 @@ public class ControllerCadastroEdificio implements ActionListener {
             
             
         } else if (action.getSource() == this.telaCadastroEdificio.getjButtonBuscar()) {
-            
             TelaBuscaEdificio telaBuscaEdificio = new TelaBuscaEdificio(null, true);
-            ControllerBuscaEdificio controllerBuscaEdificio = new ControllerBuscaEdificio(telaBuscaEdificio);
+            new ControllerBuscaEdificio(telaBuscaEdificio);
             telaBuscaEdificio.setVisible(true);
-
         } else if (action.getSource() == this.telaCadastroEdificio.getjButtonSair()) {
             this.telaCadastroEdificio.dispose();
-
         }
     }
 }

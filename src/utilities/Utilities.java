@@ -37,7 +37,7 @@ public class Utilities {
                 ((JTextArea) c).setText("");
                 c.setEnabled(habilitar);
             } else if (c instanceof JComboBox) {
-                ((JComboBox) c).setSelectedIndex(0);
+                ((JComboBox<?>) c).setSelectedIndex(0);
                 c.setEnabled(habilitar);
             } else if (c instanceof JCheckBox) {
                 ((JCheckBox) c).setSelected(false);

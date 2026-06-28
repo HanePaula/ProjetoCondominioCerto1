@@ -62,7 +62,6 @@ public JButton getjButtonNovo() {
     public ButtonGroup getButtonGroup1() {
         return buttonGroup1;
     }
-    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -265,7 +264,6 @@ public JButton getjButtonNovo() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldIdActionPerformed
 
     /**
