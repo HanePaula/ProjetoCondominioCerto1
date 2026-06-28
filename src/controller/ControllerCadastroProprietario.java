@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.TelaCadastroProprietario;
+import view.TelaBuscaProprietario;
 
 public class ControllerCadastroProprietario implements ActionListener {
 
@@ -38,6 +39,9 @@ public class ControllerCadastroProprietario implements ActionListener {
             utilities.Utilities.LimpaComponentes(this.telaCadastroProprietario.getjPanelDados(), false, this.telaCadastroProprietario.getButtonGroup1());
 
         } else if (action.getSource() == this.telaCadastroProprietario.getjButtonBuscar()) {
+            TelaBuscaProprietario telaBuscaProprietario = new TelaBuscaProprietario(null, true);
+            new ControllerBuscaProprietario(telaBuscaProprietario);
+            telaBuscaProprietario.setVisible(true);
 
         } else if (action.getSource() == this.telaCadastroProprietario.getjButtonSair()) {
             this.telaCadastroProprietario.dispose();
