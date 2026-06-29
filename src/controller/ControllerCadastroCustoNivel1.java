@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import view.TelaCadastroCustoNivel1;
+import view.TelaBuscaCustoNivel1;
 
 
 public class ControllerCadastroCustoNivel1 implements ActionListener {
@@ -42,8 +43,9 @@ public class ControllerCadastroCustoNivel1 implements ActionListener {
             utilities.Utilities.LimpaComponentes(this.telaCadastroCustoNivel1.getjPanelDados(), false, this.telaCadastroCustoNivel1.getButtonGroup1());
 
         } else if (action.getSource() == this.telaCadastroCustoNivel1.getjButtonBuscar()) {
-
-            
+            TelaBuscaCustoNivel1 telaBuscaCustoNivel1 = new TelaBuscaCustoNivel1(null, true);
+            new ControllerBuscaCustoNivel1(telaBuscaCustoNivel1);
+            telaBuscaCustoNivel1.setVisible(true);
 
         } else if (action.getSource() == this.telaCadastroCustoNivel1.getjButtonSair()) {
             this.telaCadastroCustoNivel1.dispose();
