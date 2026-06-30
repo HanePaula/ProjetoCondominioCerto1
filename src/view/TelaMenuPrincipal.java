@@ -9,6 +9,10 @@ import controller.ControllerCadastroUnidade;
 import controller.ControllerCadastroProprietario;
 import controller.ControllerCadastroFornecedor;
 import controller.ControllerCadastroSindicoProfissional;
+import controller.ControllerCadastroAreaCompartilhada;
+import controller.ControllerCadastroCustoNivel1;
+import controller.ControllerCadastroCustoNivel2;
+import controller.ControllerCadastroUnidadeCondomino;
 
 /**
  *
@@ -59,6 +63,55 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
                 System.exit(0);
             }
         });
+
+        // --- Adicionando programaticamente as telas que faltavam no menu principal ---
+        
+        javax.swing.JMenuItem jMenuItemUnidadeCondomino = new javax.swing.JMenuItem("Unidade Condômino");
+        jMenuItemUnidadeCondomino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TelaCadastroUnidadeCondomino tela = new TelaCadastroUnidadeCondomino(null, true);
+                new ControllerCadastroUnidadeCondomino(tela);
+                tela.setVisible(true);
+            }
+        });
+        
+        javax.swing.JMenuItem jMenuItemAreaCompartilhada = new javax.swing.JMenuItem("Área Compartilhada");
+        jMenuItemAreaCompartilhada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TelaCadastroAreaCompartilhada tela = new TelaCadastroAreaCompartilhada(null, true);
+                new ControllerCadastroAreaCompartilhada(tela);
+                tela.setVisible(true);
+            }
+        });
+        
+        javax.swing.JMenuItem jMenuItemCustoNivel1 = new javax.swing.JMenuItem("Custo Nível 1");
+        jMenuItemCustoNivel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TelaCadastroCustoNivel1 tela = new TelaCadastroCustoNivel1(null, true);
+                new ControllerCadastroCustoNivel1(tela);
+                tela.setVisible(true);
+            }
+        });
+        
+        javax.swing.JMenuItem jMenuItemCustoNivel2 = new javax.swing.JMenuItem("Custo Nível 2");
+        jMenuItemCustoNivel2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TelaCadastroCustoNivel2 tela = new TelaCadastroCustoNivel2(null, true);
+                new ControllerCadastroCustoNivel2(tela);
+                tela.setVisible(true);
+            }
+        });
+
+        // Inserir organizadamente no jMenu2 ("Cadastros")
+        jMenu2.insert(jMenuItemUnidadeCondomino, 2);
+        jMenu2.insert(jMenuItemAreaCompartilhada, 3);
+        
+        // Posição do Sair atualmente é a última. Inserir os Custos e Separador antes dela.
+        int count = jMenu2.getItemCount();
+        int insertIndex = count - 2; // Inserir antes de jSeparator2 (que é count - 2) e jMenuItem7 (count - 1)
+        jMenu2.insertSeparator(insertIndex++);
+        jMenu2.insert(jMenuItemCustoNivel1, insertIndex++);
+        jMenu2.insert(jMenuItemCustoNivel2, insertIndex++);
     }
 
     /**
